@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F6DEA9D205672EA00817A83 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F6DEA9C205672EA00817A83 /* main.cpp */; };
+		8F6DEAAC2056731F00817A83 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F6DEAA32056731E00817A83 /* main.cpp */; };
+		8F6DEAAD2056731F00817A83 /* Tokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F6DEAA42056731E00817A83 /* Tokenizer.cpp */; };
+		8F6DEAAE2056731F00817A83 /* Translator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F6DEAA72056731E00817A83 /* Translator.cpp */; };
+		8F6DEAAF2056731F00817A83 /* Decrypter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F6DEAA82056731E00817A83 /* Decrypter.cpp */; };
+		8F6DEAB02056731F00817A83 /* WordList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F6DEAA92056731E00817A83 /* WordList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +28,15 @@
 
 /* Begin PBXFileReference section */
 		8F6DEA99205672EA00817A83 /* Project_4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Project_4; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F6DEA9C205672EA00817A83 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8F6DEAA32056731E00817A83 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8F6DEAA42056731E00817A83 /* Tokenizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tokenizer.cpp; sourceTree = "<group>"; };
+		8F6DEAA52056731E00817A83 /* provided.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = provided.h; sourceTree = "<group>"; };
+		8F6DEAA62056731E00817A83 /* MyHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHash.h; sourceTree = "<group>"; };
+		8F6DEAA72056731E00817A83 /* Translator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Translator.cpp; sourceTree = "<group>"; };
+		8F6DEAA82056731E00817A83 /* Decrypter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Decrypter.cpp; sourceTree = "<group>"; };
+		8F6DEAA92056731E00817A83 /* WordList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WordList.cpp; sourceTree = "<group>"; };
+		8F6DEAAA2056731E00817A83 /* substituteMyHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = substituteMyHash.h; sourceTree = "<group>"; };
+		8F6DEAAB2056731E00817A83 /* wordlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wordlist.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +69,15 @@
 		8F6DEA9B205672EA00817A83 /* Project_4 */ = {
 			isa = PBXGroup;
 			children = (
-				8F6DEA9C205672EA00817A83 /* main.cpp */,
+				8F6DEAA82056731E00817A83 /* Decrypter.cpp */,
+				8F6DEAA32056731E00817A83 /* main.cpp */,
+				8F6DEAA62056731E00817A83 /* MyHash.h */,
+				8F6DEAA52056731E00817A83 /* provided.h */,
+				8F6DEAAA2056731E00817A83 /* substituteMyHash.h */,
+				8F6DEAA42056731E00817A83 /* Tokenizer.cpp */,
+				8F6DEAA72056731E00817A83 /* Translator.cpp */,
+				8F6DEAA92056731E00817A83 /* WordList.cpp */,
+				8F6DEAAB2056731E00817A83 /* wordlist.txt */,
 			);
 			path = Project_4;
 			sourceTree = "<group>";
@@ -119,7 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F6DEA9D205672EA00817A83 /* main.cpp in Sources */,
+				8F6DEAAF2056731F00817A83 /* Decrypter.cpp in Sources */,
+				8F6DEAAE2056731F00817A83 /* Translator.cpp in Sources */,
+				8F6DEAAC2056731F00817A83 /* main.cpp in Sources */,
+				8F6DEAAD2056731F00817A83 /* Tokenizer.cpp in Sources */,
+				8F6DEAB02056731F00817A83 /* WordList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
