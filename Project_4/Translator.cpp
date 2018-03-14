@@ -20,6 +20,7 @@ private:
     };
     
     Node * head;
+    unordered_map<char, char> reverseMap;
     void toLower(string &str) const; //elsewhere??
 };
 
@@ -50,28 +51,26 @@ bool TranslatorImpl::pushMapping(string ciphertext, string plaintext)
     unordered_map<char, char>::iterator iter;
     unordered_map<char, char>::iterator it;
     
+    for(it = head->map.begin(); it != head->map.end(); it++)
+    {
+        mapping->map[it->first] = it->second;
+    }
+    
     for(int i = 0; i < ciphertext.size(); i++)
     {
-        iter = head->map.find(ciphertext[i]);
+        it = mapping->map.find(ciphertext[i]);
         
-        if(iter == head->map.end())
+        if(it == head->map.end())
             mapping->map[ciphertext[i]] = plaintext[i];
         
-        else
-        {
-            if(iter->second != plaintext[i])
+        else if(it->second != plaintext[i])
                 return false;
-            else
-                mapping->map[ciphertext[i]] = plaintext[i];
-        }
         
-        for(it = head->map.begin(); it != head->map.end(); it++)
-        {
-            mapping->map[it->first] = it->second;
-            if(it->second == plaintext[i])
-                if(it->first != ciphertext[i])
-                    return false;
-        }
+        it = reverseMap.find(plaintext[i]);
+        if(it != reverseMap.end() && it->second != ciphertext[i])
+            return false;
+        
+        reverseMap[plaintext[i]] = ciphertext[i];
     }
     
     mapping->next = head;
@@ -88,6 +87,13 @@ bool TranslatorImpl::popMapping()
     Node * temp = head;
     head = head->next;
     delete temp;
+    
+    reverseMap.clear(); //is this still O(L)
+    
+    for(unordered_map<char, char>::iterator it = head->map.begin(); it != head->map.end(); it++)
+    {
+        reverseMap[it->second] = it->first;
+    }
         
     return true;
 }
