@@ -37,6 +37,7 @@ private:
         KeyType   key;
         ValueType value;
         Node *    next;
+        Node();
     };
     
     Node ** hashTable;
@@ -52,6 +53,12 @@ private:
 };
 
 #endif // MYHASH_INCLUDED
+
+template <class KeyType, class ValueType>
+MyHash<KeyType, ValueType>::Node::Node()
+{
+    next = nullptr;
+}
 
 template <class KeyType, class ValueType>
 MyHash<KeyType, ValueType>::MyHash(double maxLoadFactor): numItems(0), numBuckets(100), maxLoadFactor(maxLoadFactor)

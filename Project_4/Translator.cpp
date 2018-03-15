@@ -32,7 +32,13 @@ TranslatorImpl::TranslatorImpl()
 
 TranslatorImpl::~TranslatorImpl()
 {
-    //free memory
+    Node * temp;
+    while(head != nullptr)
+    {
+        temp = head->next;
+        delete head;
+        head = temp;
+    }
 }
 
 void TranslatorImpl::toLower(string &str) const

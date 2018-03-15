@@ -21,7 +21,7 @@ const bool shouldTestMyHash = true;
 const bool shouldTestTokenizer = true;
 const bool shouldTestWordList = true;
 const bool shouldTestTranslator = true;
-const bool shouldTestDecrypter = false;
+const bool shouldTestDecrypter = true;
 
 // **************************************************************
 
@@ -41,6 +41,7 @@ int main()
     if (shouldTestWordList  ) { testWordList();   cout << "Passed WordList tests" << endl; }
     if (shouldTestTranslator) { testTranslator(); cout << "Passed Translator tests" << endl; }
     if (shouldTestDecrypter ) { testDecrypter();  cout << "Passed Decrypter tests" << endl; }
+    cout<<"FUCK YAHH ALL THE TESTS PASSED YOU MOTHERFUCKING DONE!"<<endl;
 }
 
 void testMyHash()
@@ -143,6 +144,7 @@ void testDecrypter()
         "purple PEOPLE eater!!",
         "purple PEOPLE ether!!"
     };
+    
     assert(v.size() == 4  &&  equal(v.begin(), v.end(), expected));
     assert(d.crack("smxsdg SGOSDG gfvgy!!").empty());
     remove(FILENAME);
